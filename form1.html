@@ -1,0 +1,125 @@
+<html>
+<head>
+<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Makes "field" required and an email address.</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<style type="text1/css">
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="myForm">
+<form id="myform">
+<div class="row">
+<div class="col-md-6">
+<div class="div-form">
+<label for="sTaffname" class="head">Name<span>*</span></label>
+<input class="left" id="sTaffname" name="sTaffname" type="text">
+</div>
+</div>
+<div class="col-md-6">
+<label for="sTaffsurname" class="head">SurName<span>*</span></label>
+<input class="left" id="sTaffsurname" name="sTaffsurname" type="text">
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6">
+<label for="sTaffpostcode" class="head">Postcode<span>*</span></label><input type="text" name="sTaffpostcode">
+</div>
+<div class="col-md-6">
+<label for="sTaffgender" class="head">Gender<span>*</span></label>
+<select name="sTaffgender">
+<option selected="selected">Female</option>
+<option>Male</option>
+</select>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6">
+<label for ="sTaffage" class="head">Age<span>*</span></label>
+<select name="sTaffage">
+ <option selected="selected" value="15-24">15-24</option>
+                <option value="25-34">25-34</option>
+                <option value="35-44">35-44</option>
+                <option value="45-54">45-54</option>
+                <option value="55-64">55-64</option>
+                <option value="65+">65+</option>
+</select>
+</div>
+
+<div class="col-md-6">
+<label for ="sTaffbirthmonth" class="head">BirthMonth<span>*</span></label>
+<select name="sTaffbirthmonth">
+ <option selected="selected" value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+</select>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6">
+<label for ="sTaffmobile" class="head">Mobile<span>*</span></label><input type="text" name="sTaffmobile">
+</div>
+<div class="col-md-6">
+<label for="sTaffemail" class="head">Email<span>*</span></label><input type="text" name="sTaffemail" placeholder=""  data-validation="email">
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<button type="submit" name="">Submit</button>
+</div>
+</form>
+</div>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script>
+// just for the demos, avoids form submit
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+$( "#myform" ).validate({
+  rules: {
+    sTaffname: { required: true},
+    sTaffsurname:{ required: true},
+    sTaffpostcode:{ required: true, min:6, number: true},
+    sTaffmobile:{ required: true, min:10, number: true},
+    sTaffemail:{ required: true, email:true}
+  },
+  messages:{
+  	 sTaffname: { required: "Please enter the name"},
+    sTaffsurname:{ required: "Please enter the surname"},
+    sTaffpostcode:{ required: "Please enter the postalcode", min:"Please enter the correct postalcode", number:"Please enter valid postalcode"},
+    sTaffmobile:{ required: "Please enter the mobile number", min: "Please enter the correct mobile number", number:"Please enter valid mobile number"},
+    sTaffemail:{ required: "Please enter the email"}
+  },
+  errorPlacement: function(error, element)
+        {
+            error.insertAfter(element);
+         }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+	.error
+{
+color:#e66e6e;
+font-family:verdana, Helvetica;
+}
+label.error {
+    background: none;
+    width:100%;
+    display: block;
+    font-weight: 100;
+    font-size: 12px;
+    }
+label.head{
+   background: #cecece none repeat scroll 0 0;
+    color: #555;
+    height: 30px;
+    padding: 5px 10px 0;
+    vertical-align: top;
+    width: 100px;
+}
+.head span{
+  color:red;
+}
+input[type="text"]{
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #333;
+    outline: medium none;
+    height: 30px;
+}
+input[type="text"], select
+{
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: currentcolor currentcolor #999;
+    border-image: none;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    width:80%;
+    padding-left: 10px;
+}
+
+.myForm .row{
+  min-height: 100px;
+}
+select{
+  -webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+height: 30px;
+position: relative;
+ background: rgba(0, 0, 0, 0) url("../img/caret-down.png") no-repeat scroll right center / 2% auto;
+}
+button{
+   -webkit-appearance: none;
+   -moz-appearance: none;
+appearance: none;
+background: none;
+border:none;
+text-transform: uppercase;
+font-weight: 700;
+border-bottom:2px solid #666;
+display: block;
+margin:0 auto;
+padding-bottom:10px;
+}
+button:after{
+  content:'\f178';
+  font-family: 'fontawesome';
+  color:#666;
+  margin-left: 10px;
+}
+.myForm::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color:#999;
+
+}
+.myForm::-moz-placeholder { /* Firefox 19+ */
+  color: #999;
+
+}
+.myForm:-ms-input-placeholder { /* IE 10+ */
+  color: #999;
+
+}
+.myForm:-moz-placeholder { /* Firefox 18- */
+  color: #999;
+
+}
+.div-form{
+  position: relative;
+}
+.myForm{
+  margin-top:100px;
+}
+select option{
+  padding: 10px 0;
+  background: #f9f8f8;
+  border:none;
+}
