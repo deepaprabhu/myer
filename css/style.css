@@ -11,15 +11,17 @@ label.error {
     font-size: 12px;
     }
 label.head{
-   background: #cecece none repeat scroll 0 0;
-    color: #555;
-    height: 30px;
-    padding: 5px 10px 0;
+  color: #555;
+    display: block;
+    height: 25px;
+    margin-bottom: 0;
+    padding: 0 5px;
     vertical-align: top;
-    width: 100px;
+    width: 100%;
 }
 .head span{
   color:red;
+  font-size: 18px;
 }
 input[type="text"]{
 	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
@@ -29,15 +31,8 @@ input[type="text"]{
 }
 input[type="text"], select
 {
-	-moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: currentcolor currentcolor #999;
-    border-image: none;
-    border-style: none none solid;
-    border-width: medium medium 1px;
-    width:80%;
+border:#999 solid 1px;
+    width:95%;
     padding-left: 10px;
 }
 
@@ -50,20 +45,19 @@ select{
 appearance: none;
 height: 30px;
 position: relative;
- background: rgba(0, 0, 0, 0) url("../img/caret-down.png") no-repeat scroll right center / 2% auto;
+ background: rgba(0, 0, 0, 0) url("../img/caret-down.png") no-repeat scroll 98% center / 2% auto;
 }
 button{
    -webkit-appearance: none;
    -moz-appearance: none;
 appearance: none;
 background: none;
-border:none;
+border:#999 solid 1px;
 text-transform: uppercase;
 font-weight: 700;
-border-bottom:2px solid #666;
 display: block;
-margin:0 auto;
-padding-bottom:10px;
+margin:0 44%;
+padding:8px 15px;
 }
 button:after{
   content:'\f178';

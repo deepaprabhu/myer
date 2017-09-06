@@ -1,37 +1,14 @@
 @media screen and (min-width:320px)  {
-input[type="text"], select {
+       button {
 
-    width: 65%;
+  float: none;
+     margin: 20px auto;
 }
-.row .col-md-6{
-	margin-bottom: 50px;
-}
-.row{
-	margin-bottom: 0px;
-}
+        }
+@media screen and (min-width:1366px)  {
+       button {
 
-    }
-    @media screen and (min-width:400px)  {
-    	input[type="text"], select {
-
-    width: 70%;
+  float: left;
+     margin: 20px 44%;
 }
-}
-@media screen and (min-width:480px)  {
-    	input[type="text"], select {
-
-    width: 75%;
-}
-}
-@media screen and (min-width:580px)  {
-    	input[type="text"], select {
-
-    width: 80%;
-}
-}
-@media screen and (min-width:992px)  {
-    	input[type="text"], select {
-
-    width: 75%;
-}
-}
+        }
